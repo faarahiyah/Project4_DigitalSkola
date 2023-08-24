@@ -1,0 +1,193 @@
+[0m06:45:17.986902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1068fcf90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106914550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106914b50>]}
+
+
+============================== 06:45:17.989314 | 0afd9596-ffd5-4c82-9fce-fe5b0119da10 ==============================
+[0m06:45:17.989314 [info ] [MainThread]: Running with dbt=1.6.0
+[0m06:45:17.989647 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/far/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/far/Documents/DigitalSkola/Project4/dbt-snowflake/digitalskola_project4/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run -s my_first_dbt_model', 'send_anonymous_usage_stats': 'True'}
+[0m06:45:18.106369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0afd9596-ffd5-4c82-9fce-fe5b0119da10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107247010>]}
+[0m06:45:18.110132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0afd9596-ffd5-4c82-9fce-fe5b0119da10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107268550>]}
+[0m06:45:18.110680 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m06:45:18.119501 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m06:45:18.120043 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m06:45:18.120270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '0afd9596-ffd5-4c82-9fce-fe5b0119da10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107244190>]}
+[0m06:45:18.450293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0afd9596-ffd5-4c82-9fce-fe5b0119da10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10733af90>]}
+[0m06:45:18.454944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0afd9596-ffd5-4c82-9fce-fe5b0119da10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073f6910>]}
+[0m06:45:18.455178 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 372 macros, 0 groups, 0 semantic models
+[0m06:45:18.455351 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0afd9596-ffd5-4c82-9fce-fe5b0119da10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10343e7d0>]}
+[0m06:45:18.455986 [info ] [MainThread]: 
+[0m06:45:18.456351 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m06:45:18.456814 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CLIMATE_WH'
+[0m06:45:18.462726 [debug] [ThreadPool]: Using snowflake connection "list_CLIMATE_WH"
+[0m06:45:18.462941 [debug] [ThreadPool]: On list_CLIMATE_WH: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "digitalskola_project4", "target_name": "dev", "connection_name": "list_CLIMATE_WH"} */
+show terse schemas in database CLIMATE_WH
+    limit 10000
+[0m06:45:18.463081 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:45:35.467437 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "digitalskola_project4", "target_name": "dev", "connection_name": "list_CLIMATE_WH"} */
+show terse schemas in database CLIMATE_WH
+    limit 10000
+[0m06:45:35.468128 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m06:45:35.468660 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m06:45:35.469034 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m06:45:35.469500 [debug] [ThreadPool]: On list_CLIMATE_WH: No close available on handle
+[0m06:45:35.471026 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:45:35.471482 [debug] [MainThread]: Connection 'list_CLIMATE_WH' was properly closed.
+[0m06:45:35.471889 [info ] [MainThread]: 
+[0m06:45:35.472320 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 17.02 seconds (17.02s).
+[0m06:45:35.472910 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "CLIMATE_WH"
+  Database Error
+    250001 (08001): Failed to connect to DB. Verify the account name is correct: EC51662-VZSAJHI.snowflakecomputing.com:443. HTTP 403: Forbidden
+[0m06:45:35.473572 [debug] [MainThread]: Command `dbt run` failed at 06:45:35.473479 after 17.50 seconds
+[0m06:45:35.473950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106914b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1068ff5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100cbe490>]}
+[0m06:45:35.474371 [debug] [MainThread]: Flushing usage events
+[0m06:50:40.320184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1118f74d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111a10950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111a10f50>]}
+
+
+============================== 06:50:40.322843 | 0e026312-8543-4b26-925a-863cf73fe067 ==============================
+[0m06:50:40.322843 [info ] [MainThread]: Running with dbt=1.6.0
+[0m06:50:40.323168 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/far/Documents/DigitalSkola/Project4/dbt-snowflake/digitalskola_project4/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/far/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m06:50:40.480051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0e026312-8543-4b26-925a-863cf73fe067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112247a50>]}
+[0m06:50:40.483832 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0e026312-8543-4b26-925a-863cf73fe067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112254750>]}
+[0m06:50:40.484326 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m06:50:40.493053 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m06:50:40.510313 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:50:40.510583 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:50:40.513887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0e026312-8543-4b26-925a-863cf73fe067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111a2e290>]}
+[0m06:50:40.518837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0e026312-8543-4b26-925a-863cf73fe067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11228ba10>]}
+[0m06:50:40.519066 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 372 macros, 0 groups, 0 semantic models
+[0m06:50:40.519232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0e026312-8543-4b26-925a-863cf73fe067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105adac50>]}
+[0m06:50:40.519993 [info ] [MainThread]: 
+[0m06:50:40.520353 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m06:50:40.520840 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CLIMATE_WH'
+[0m06:50:40.527094 [debug] [ThreadPool]: Using snowflake connection "list_CLIMATE_WH"
+[0m06:50:40.527273 [debug] [ThreadPool]: On list_CLIMATE_WH: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "digitalskola_project4", "target_name": "dev", "connection_name": "list_CLIMATE_WH"} */
+show terse schemas in database CLIMATE_WH
+    limit 10000
+[0m06:50:40.527406 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:50:41.875588 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "digitalskola_project4", "target_name": "dev", "connection_name": "list_CLIMATE_WH"} */
+show terse schemas in database CLIMATE_WH
+    limit 10000
+[0m06:50:41.876087 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m06:50:41.876518 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m06:50:41.876829 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m06:50:41.877231 [debug] [ThreadPool]: On list_CLIMATE_WH: No close available on handle
+[0m06:50:41.878502 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:50:41.878808 [debug] [MainThread]: Connection 'list_CLIMATE_WH' was properly closed.
+[0m06:50:41.879123 [info ] [MainThread]: 
+[0m06:50:41.879475 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 1.36 seconds (1.36s).
+[0m06:50:41.879969 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "CLIMATE_WH"
+  Database Error
+    250001 (08001): Failed to connect to DB. Verify the account name is correct: EC51662-VZSAJHI.snowflakecomputing.com:443. HTTP 403: Forbidden
+[0m06:50:41.880529 [debug] [MainThread]: Command `dbt run` failed at 06:50:41.880447 after 1.57 seconds
+[0m06:50:41.880859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111a0fe10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1118ff050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112871250>]}
+[0m06:50:41.881192 [debug] [MainThread]: Flushing usage events
+[0m06:51:44.791676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094af150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094c7bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094c9390>]}
+
+
+============================== 06:51:44.793993 | 86d5f2ac-6cc9-4aa0-94fd-ed501bd66bec ==============================
+[0m06:51:44.793993 [info ] [MainThread]: Running with dbt=1.6.0
+[0m06:51:44.794295 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/far/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/far/Documents/DigitalSkola/Project4/dbt-snowflake/digitalskola_project4/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m06:51:44.912040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '86d5f2ac-6cc9-4aa0-94fd-ed501bd66bec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d00a10>]}
+[0m06:51:44.915900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '86d5f2ac-6cc9-4aa0-94fd-ed501bd66bec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094ede90>]}
+[0m06:51:44.916439 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m06:51:44.924470 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m06:51:44.941427 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:51:44.941673 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:51:44.944840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '86d5f2ac-6cc9-4aa0-94fd-ed501bd66bec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d9b190>]}
+[0m06:51:44.949968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '86d5f2ac-6cc9-4aa0-94fd-ed501bd66bec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d2bad0>]}
+[0m06:51:44.950245 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 372 macros, 0 groups, 0 semantic models
+[0m06:51:44.950417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '86d5f2ac-6cc9-4aa0-94fd-ed501bd66bec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1068b6c10>]}
+[0m06:51:44.951201 [info ] [MainThread]: 
+[0m06:51:44.951587 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m06:51:44.952101 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CLIMATE_WH'
+[0m06:51:44.958536 [debug] [ThreadPool]: Using snowflake connection "list_CLIMATE_WH"
+[0m06:51:44.958768 [debug] [ThreadPool]: On list_CLIMATE_WH: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "digitalskola_project4", "target_name": "dev", "connection_name": "list_CLIMATE_WH"} */
+show terse schemas in database CLIMATE_WH
+    limit 10000
+[0m06:51:44.958925 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:51:46.374432 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "digitalskola_project4", "target_name": "dev", "connection_name": "list_CLIMATE_WH"} */
+show terse schemas in database CLIMATE_WH
+    limit 10000
+[0m06:51:46.375093 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m06:51:46.375638 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m06:51:46.376021 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m06:51:46.376514 [debug] [ThreadPool]: On list_CLIMATE_WH: No close available on handle
+[0m06:51:46.378077 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:51:46.378561 [debug] [MainThread]: Connection 'list_CLIMATE_WH' was properly closed.
+[0m06:51:46.378988 [info ] [MainThread]: 
+[0m06:51:46.379438 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 1.43 seconds (1.43s).
+[0m06:51:46.380047 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "CLIMATE_WH"
+  Database Error
+    250001 (08001): Failed to connect to DB. Verify the account name is correct: EC51662-VZSAJHI.snowflakecomputing.com:443. HTTP 403: Forbidden
+[0m06:51:46.380848 [debug] [MainThread]: Command `dbt run` failed at 06:51:46.380750 after 1.60 seconds
+[0m06:51:46.381248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094c8cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094b7110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105179cd0>]}
+[0m06:51:46.381663 [debug] [MainThread]: Flushing usage events
+[0m06:52:14.724138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053fe050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104df4d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10540f390>]}
+
+
+============================== 06:52:14.726199 | 1ac466ee-175d-4824-9deb-ed4a0b705276 ==============================
+[0m06:52:14.726199 [info ] [MainThread]: Running with dbt=1.6.0
+[0m06:52:14.726513 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/far/Documents/DigitalSkola/Project4/dbt-snowflake/digitalskola_project4/logs', 'profiles_dir': '/Users/far/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m06:52:14.821990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1ac466ee-175d-4824-9deb-ed4a0b705276', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c44490>]}
+[0m06:52:14.825791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1ac466ee-175d-4824-9deb-ed4a0b705276', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105432410>]}
+[0m06:52:14.826127 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m06:52:14.834356 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m06:52:14.847337 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:52:14.847699 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:52:14.850745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1ac466ee-175d-4824-9deb-ed4a0b705276', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cf47d0>]}
+[0m06:52:14.855037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1ac466ee-175d-4824-9deb-ed4a0b705276', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c44f10>]}
+[0m06:52:14.855280 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 372 macros, 0 groups, 0 semantic models
+[0m06:52:14.855464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1ac466ee-175d-4824-9deb-ed4a0b705276', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1027fac50>]}
+[0m06:52:14.856236 [info ] [MainThread]: 
+[0m06:52:14.856611 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m06:52:14.857114 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CLIMATE_WH'
+[0m06:52:14.863903 [debug] [ThreadPool]: Using snowflake connection "list_CLIMATE_WH"
+[0m06:52:14.864148 [debug] [ThreadPool]: On list_CLIMATE_WH: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "digitalskola_project4", "target_name": "dev", "connection_name": "list_CLIMATE_WH"} */
+show terse schemas in database CLIMATE_WH
+    limit 10000
+[0m06:52:14.864299 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:52:15.903617 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "digitalskola_project4", "target_name": "dev", "connection_name": "list_CLIMATE_WH"} */
+show terse schemas in database CLIMATE_WH
+    limit 10000
+[0m06:52:15.904360 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m06:52:15.905043 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m06:52:15.905442 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m06:52:15.905936 [debug] [ThreadPool]: On list_CLIMATE_WH: No close available on handle
+[0m06:52:15.907524 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:52:15.907991 [debug] [MainThread]: Connection 'list_CLIMATE_WH' was properly closed.
+[0m06:52:15.908412 [info ] [MainThread]: 
+[0m06:52:15.908861 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 1.05 seconds (1.05s).
+[0m06:52:15.909458 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "CLIMATE_WH"
+  Database Error
+    250001 (08001): Failed to connect to DB. Verify the account name is correct: EC51662-VZSAJHI.snowflakecomputing.com:443. HTTP 403: Forbidden
+[0m06:52:15.910227 [debug] [MainThread]: Command `dbt run` failed at 06:52:15.910109 after 1.20 seconds
+[0m06:52:15.910700 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10540f8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053f8850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1011fd490>]}
+[0m06:52:15.911186 [debug] [MainThread]: Flushing usage events
+[0m07:21:01.799915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073fd210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073fd090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107411490>]}
+
+
+============================== 07:21:01.802734 | 32471b74-d2d0-4317-b1fd-6b45a2b854a9 ==============================
+[0m07:21:01.802734 [info ] [MainThread]: Running with dbt=1.6.0
+[0m07:21:01.803072 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/far/.dbt', 'log_path': '/Users/far/Documents/DigitalSkola/Project4/dbt-snowflake/digitalskola_project4/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt docs generate', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:21:01.960561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '32471b74-d2d0-4317-b1fd-6b45a2b854a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107fb8590>]}
+[0m07:21:01.964300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '32471b74-d2d0-4317-b1fd-6b45a2b854a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107fc89d0>]}
+[0m07:21:01.964870 [info ] [MainThread]: Registered adapter: snowflake=1.6.0
+[0m07:21:01.973516 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m07:21:01.992642 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 3 files added, 1 files changed.
+[0m07:21:01.992987 [debug] [MainThread]: Partial parsing: added file: digitalskola_project4://models/delayed_deliveries.sql
+[0m07:21:01.993177 [debug] [MainThread]: Partial parsing: added file: digitalskola_project4://models/sources.yml
+[0m07:21:01.993336 [debug] [MainThread]: Partial parsing: added file: digitalskola_project4://models/schemas.yml
+[0m07:21:01.993524 [debug] [MainThread]: Partial parsing: updated file: digitalskola_project4://models/example/my_first_dbt_model.sql
+[0m07:21:02.026397 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.digitalskola_project4.delayed_deliveries' (models/delayed_deliveries.sql) depends on a source named 'STANDARD_TILE.history_day' which was not found
+[0m07:21:02.026888 [debug] [MainThread]: Command `dbt docs generate` failed at 07:21:02.026832 after 0.24 seconds
+[0m07:21:02.027102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107410f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073fca10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108147ad0>]}
+[0m07:21:02.027305 [debug] [MainThread]: Flushing usage events
